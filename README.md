@@ -42,20 +42,20 @@ import {NgbModule} from "@ng-bootstrap/ng-bootstrap";
 
 Import `ng-bootstrap` to include styles for all ng-bootstrap components or pick and choose from the list below to include just the parts you want\*.
 
-- ngb-accordion (`@import '~@sebgroup/ng-bootstrap/scss/styles/ngb-accordion';`)
-- ngb-datepicker (`@import '~@sebgroup/ng-bootstrap/scss/styles/ngb-datepicker';`)
-- ngb-dropdown (`@import '~@sebgroup/ng-bootstrap/scss/styles/ngb-dropdown';`)
-- ngb-tooltip (`@import '~@sebgroup/ng-bootstrap/scss/styles/ngb-tooltip';`)
+- ngb-accordion (`@import '@sebgroup/ng-bootstrap/scss/styles/ngb-accordion';`)
+- ngb-datepicker (`@import '@sebgroup/ng-bootstrap/scss/styles/ngb-datepicker';`)
+- ngb-dropdown (`@import '@sebgroup/ng-bootstrap/scss/styles/ngb-dropdown';`)
+- ngb-tooltip (`@import '@sebgroup/ng-bootstrap/scss/styles/ngb-tooltip';`)
 
 \* Please note that you need some styles from bootstrap too as this theme relies on [@sebgroup/bootstrap](https://sebgroup.github.io/bootstrap/). See complete example below:
 
 ```css
-@import '~@sebgroup/bootstrap/scss/styles/core';
-@import '~@sebgroup/bootstrap/scss/styles/reboot';
-@import '~@sebgroup/bootstrap/scss/styles/modal'; /* needed for modal */
-@import '~@sebgroup/bootstrap/scss/styles/animations'; /* needed for modal animations */
-@import '~@sebgroup/ng-bootstrap/scss/ng-bootstrap'; /* <-- Add this line */
-@import '~@sebgroup/fonts/scss/seb-fonts';
+@import '@sebgroup/bootstrap/scss/styles/core';
+@import '@sebgroup/bootstrap/scss/styles/reboot';
+@import '@sebgroup/bootstrap/scss/styles/modal'; /* needed for modal */
+@import '@sebgroup/bootstrap/scss/styles/animations'; /* needed for modal animations */
+@import '@sebgroup/ng-bootstrap/scss/ng-bootstrap'; /* <-- Add this line */
+@import '@sebgroup/fonts/scss/seb-fonts';
 ```
 
 For more info please see the [wiki](https://github.com/sebgroup/ng-bootstrap/wiki)

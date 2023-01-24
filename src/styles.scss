@@ -1,42 +1,42 @@
 /* You can add global styles to this file, and also import other style files */
 
 // minimal scss dependencies for ngb
-@import '~@sebgroup/bootstrap/scss/styles/functions';
-@import '~@sebgroup/bootstrap/scss/variables';
-@import '~@sebgroup/bootstrap/scss/mixins/mixins';
-@import '~@sebgroup/bootstrap/scss/styles/reboot';
-@import '~@sebgroup/fonts/scss/seb-fonts';
-@import '~@sebgroup/bootstrap/scss/styles/forms';
-@import '~@sebgroup/bootstrap/scss/styles/custom-forms'; // needed for datepicker
-@import '~@sebgroup/bootstrap/scss/styles/dropdown'; // needed for dropdown
-@import '~@sebgroup/bootstrap/scss/styles/tooltip'; // needed for tooltips
-@import '~@sebgroup/bootstrap/scss/styles/animations'; // needed for animations
-@import '~@sebgroup/bootstrap/scss/styles/modal'; // needed for modals
+@import '@sebgroup/bootstrap/scss/styles/functions';
+@import '@sebgroup/bootstrap/scss/variables';
+@import '@sebgroup/bootstrap/scss/mixins/mixins';
+@import '@sebgroup/bootstrap/scss/styles/reboot';
+@import '@sebgroup/fonts/scss/seb-fonts';
+@import '@sebgroup/bootstrap/scss/styles/forms';
+@import '@sebgroup/bootstrap/scss/styles/custom-forms'; // needed for datepicker
+@import '@sebgroup/bootstrap/scss/styles/dropdown'; // needed for dropdown
+@import '@sebgroup/bootstrap/scss/styles/tooltip'; // needed for tooltips
+@import '@sebgroup/bootstrap/scss/styles/animations'; // needed for animations
+@import '@sebgroup/bootstrap/scss/styles/modal'; // needed for modals
 
 // needed for demo
 
-@import '~@sebgroup/bootstrap/scss/styles/scroll';
-@import '~@sebgroup/bootstrap/scss/styles/tables';
-@import '~@sebgroup/bootstrap/scss/styles/alert';
-@import '~@sebgroup/bootstrap/scss/styles/button-group';
-@import '~@sebgroup/bootstrap/scss/styles/input-group';
-@import '~@sebgroup/bootstrap/scss/styles/navbar';
-@import '~@sebgroup/bootstrap/scss/styles/fifth-element';
-@import '~@sebgroup/bootstrap/scss/styles/type';
-@import '~@sebgroup/bootstrap/scss/styles/utilities';
-@import '~@sebgroup/bootstrap/scss/styles/card';
-@import '~@sebgroup/bootstrap/scss/styles/buttons';
-@import '~@sebgroup/bootstrap/scss/styles/close';
-@import '~@sebgroup/bootstrap/scss/styles/grid';
-@import '~@sebgroup/bootstrap/scss/styles/nav';
-@import '~@sebgroup/bootstrap/scss/styles/code';
-@import '~@sebgroup/bootstrap/scss/styles/list-group';
+@import '@sebgroup/bootstrap/scss/styles/scroll';
+@import '@sebgroup/bootstrap/scss/styles/tables';
+@import '@sebgroup/bootstrap/scss/styles/alert';
+@import '@sebgroup/bootstrap/scss/styles/button-group';
+@import '@sebgroup/bootstrap/scss/styles/input-group';
+@import '@sebgroup/bootstrap/scss/styles/navbar';
+@import '@sebgroup/bootstrap/scss/styles/fifth-element';
+@import '@sebgroup/bootstrap/scss/styles/type';
+@import '@sebgroup/bootstrap/scss/styles/utilities';
+@import '@sebgroup/bootstrap/scss/styles/card';
+@import '@sebgroup/bootstrap/scss/styles/buttons';
+@import '@sebgroup/bootstrap/scss/styles/close';
+@import '@sebgroup/bootstrap/scss/styles/grid';
+@import '@sebgroup/bootstrap/scss/styles/nav';
+@import '@sebgroup/bootstrap/scss/styles/code';
+@import '@sebgroup/bootstrap/scss/styles/list-group';
 
 @import '../scss/ng-bootstrap';
 
 
 // needed for markup examples
-@import "~angular-exemplify/scss/prism-exemplify";
+@import "angular-exemplify/scss/prism-exemplify";
 
 .nav-tabs .nav-item .nav-link {
   background: transparent;
