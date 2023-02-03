@@ -1,0 +1,24 @@
+@import "../../scss/exemplify-variables";
+:host {
+  display: block;
+  position: relative;
+  margin-top: 1rem;
+  &:hover ::ng-deep.btn-group {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+    .btn.not-active {
+      text-decoration: underline;
+    }
+  }
+}
+
+.nav-link:not(.active) {
+  border-bottom: inherit;
+}
+
+@media only screen and (max-width : $exemplify-mobile-width) {
+  .custom-select {
+    padding-right: $exemplify-custom-toolbar-width;
+    background-position-x: calc(100% - #{$exemplify-custom-toolbar-width} - 8px);
+  }
+}

@@ -1,17 +1,15 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import {ExemplifyModule} from "angular-exemplify";
-
-
+import { AngularExemplifyModule } from "../../../angular-exemplify/lib/angular-exemplify.module";
 
 @NgModule({
   declarations: [],
   imports: [
     CommonModule,
-    ExemplifyModule
+    AngularExemplifyModule
   ],
   exports: [
-      ExemplifyModule
+    AngularExemplifyModule
   ]
 })
 export class SharedModule { }
