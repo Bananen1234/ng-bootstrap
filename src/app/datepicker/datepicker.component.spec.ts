@@ -21,7 +21,6 @@ describe('DatepickerComponent', () => {
         CommonModule,
         SharedModule,
         RouterTestingModule,
-        FormsModule,
         NgbDatepickerModule,
         DatepickerRoutingModule
       ]
