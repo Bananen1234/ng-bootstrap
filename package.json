@@ -62,7 +62,7 @@
     "@angular/platform-browser": "^13.3.12",
     "@angular/platform-browser-dynamic": "^13.3.12",
     "@angular/router": "^13.3.12",
-    "@ng-bootstrap/ng-bootstrap": "^11.0.0",
+    "@ng-bootstrap/ng-bootstrap": "^13",
     "@sebgroup/bootstrap": "^6.0.0",
     "body-scroll-lock": "^3.1.5",
     "core-js": "^2.6.12",
