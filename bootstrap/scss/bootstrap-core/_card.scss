@@ -266,7 +266,7 @@
 .accordion {
   overflow-anchor: none;
 
-  > .card {
+  > .accordion-item {
     overflow: hidden;
 
     &:not(:last-of-type) {
@@ -278,7 +278,7 @@
       @include border-top-radius(0);
     }
 
-    > .card-header {
+    > .accordion-header {
       @include border-radius(0);
       margin-bottom: -$card-border-width;
     }
