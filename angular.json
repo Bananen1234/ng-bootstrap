@@ -146,7 +146,6 @@
       }
     }
   },
-  "defaultProject": "ng-bootstrap",
   "cli": {
     "analytics": false
   }

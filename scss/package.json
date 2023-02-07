@@ -1,6 +1,6 @@
 {
   "name": "@sebgroup/ng-bootstrap",
-  "version": "0.0.0-semantically-released",
+  "version": "14.0.0",
   "description": "A SEB theme for ng-bootstrap",
   "main": "scss/ng-bootstrap.scss",
   "scripts": {
@@ -20,13 +20,13 @@
     "url": "https://github.com/sebgroup/ng-bootstrap/issues"
   },
   "dependencies": {
-    "@ng-bootstrap/ng-bootstrap": "^10.0.0"
+    "@ng-bootstrap/ng-bootstrap": "^13.0.0"
   },
   "peerDependencies": {
-    "@angular/animations": ">=12.0.0-0",
-    "@angular/core": ">=12.0.0-0",
-    "@angular/common": ">=12.0.0-0",
-    "@angular/platform-browser": ">=12.0.0-0",
+    "@angular/animations": ">=14.2.12",
+    "@angular/core": ">=14.2.12",
+    "@angular/common": ">=14.2.12",
+    "@angular/platform-browser": ">=14.2.12",
     "@sebgroup/bootstrap": ">=6.0.0-0",
     "rxjs": "^6.6.0"
   }

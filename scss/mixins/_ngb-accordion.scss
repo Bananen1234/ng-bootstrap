@@ -28,7 +28,7 @@
         width: 100%;
         text-align: left;
         font-size: $h4-font-size;
-        border: none;
+        border: none !important;
         border-radius: 0;
         &:not(.collapsed), &:focus {
           background: $accordion-bg-hover;

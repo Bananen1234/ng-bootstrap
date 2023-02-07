@@ -1,7 +1,7 @@
 import {Component, Input, OnDestroy, OnInit} from '@angular/core';
 import { disableBodyScroll, enableBodyScroll } from 'body-scroll-lock';
 import {MobileDetectService} from '../../services/mobile-detect.service';
-import {ControlValueAccessor, FormArray, FormBuilder, FormControl, FormGroup, NG_VALUE_ACCESSOR} from '@angular/forms';
+import {ControlValueAccessor, UntypedFormArray, UntypedFormBuilder, UntypedFormControl, UntypedFormGroup, NG_VALUE_ACCESSOR} from '@angular/forms';
 import {distinctUntilChanged, map, startWith, takeUntil, tap} from 'rxjs/operators';
 import {Observable, Subject} from 'rxjs';
 
@@ -31,13 +31,13 @@ export class SelectComponent implements ControlValueAccessor, OnInit, OnDestroy 
   @Input() set options(value: any[]) {
     this._options = value;
   }
-  get multiselect(): FormArray {
-    return this.checkboxForm.get('multiselect') as FormArray;
+  get multiselect(): UntypedFormArray {
+    return this.checkboxForm.get('multiselect') as UntypedFormArray;
   }
 
-  checkboxForm: FormGroup;
+  checkboxForm: UntypedFormGroup;
 
-  constructor(private mobileDetectService: MobileDetectService, private fb: FormBuilder) {
+  constructor(private mobileDetectService: MobileDetectService, private fb: UntypedFormBuilder) {
     this.checkboxForm = this.fb.group({
       selectAll: this.fb.control(!this._options.find(option => option.selected === false)),
       multiselect: this.fb.array(this._options.filter(option => option.selected)),
@@ -92,7 +92,7 @@ export class SelectComponent implements ControlValueAccessor, OnInit, OnDestroy 
   }
 
   private _addSelection(): void {
-    this._options.map(option => this.multiselect.push(new FormControl(option.selected)));
+    this._options.map(option => this.multiselect.push(new UntypedFormControl(option.selected)));
   }
 
   toggleContainer(value: boolean): void {

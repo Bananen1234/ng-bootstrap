@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { MobileDetectService } from '../services/mobile-detect.service';
-import {FormBuilder} from '@angular/forms';
+import {UntypedFormBuilder} from '@angular/forms';
 
 @Component({
   selector: 'app-dropdown',
@@ -9,7 +9,7 @@ import {FormBuilder} from '@angular/forms';
 })
 export class DropdownComponent {
 
-  constructor(private mobileDetectService: MobileDetectService, private fb: FormBuilder) { }
+  constructor(private mobileDetectService: MobileDetectService, private fb: UntypedFormBuilder) { }
 
   options: Array<string> = ['First', 'Second', 'Third', 'Forth']; // available options, used by dropdown and multi-select example
   selected: string; // selected option for dropdown example

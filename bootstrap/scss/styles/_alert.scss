@@ -1,0 +1,107 @@
+// @import "styles/alert"; bootstrap default
+
+/** SEB specific alert styles */
+
+//
+// Base styles
+//
+
+.alert {
+  position: relative;
+  padding: $alert-padding-y $alert-padding-x;
+  margin-bottom: $alert-margin-bottom;
+  border: $alert-border-width solid transparent;
+  @include border-radius($alert-border-radius);
+}
+
+// Headings for larger alerts
+.alert-heading {
+  // Specified to prevent conflicts of changing $headings-color
+  color: inherit;
+}
+
+// Provide class for links that match alerts
+.alert-link {
+  font-weight: $alert-link-font-weight;
+}
+
+// Prevent header from getting border when zoomed to 125%
+.alert-heading {
+  position: relative;
+  z-index: 0;
+  display: inline-block;
+  width: 100%;
+  margin-bottom: 0;
+  &::after {
+    content: '';
+    display: block;
+    position: absolute;
+    background: inherit;
+    top: -1px;
+    width: calc(100% + 2px);
+    height: calc(100% + 1px);
+    left: -1px;
+    z-index: -1;
+  }
+}
+
+// Dismissible alerts
+//
+// Place the close button in the top right corner.
+
+.alert > .close {
+  margin-top: -.25rem;
+  margin-right: -.5rem;
+}
+
+// Alternate styles
+//
+// Generate contextual modifier classes for colorizing the alert.
+
+@each $color, $value in $theme-colors {
+  // override the style of primary and info alerts
+  @if ($color == 'primary') {
+    $value: map-get($theme-colors, 'secondary');
+  }
+  .alert-#{$color} {
+    @include alert-variant($value, $value, theme-color-level($color, $alert-color-level));
+  }
+  .alert[class*=#{$color}] .close {
+  @include close($value);
+}
+}
+
+// Alert icon styles
+//
+// Generate contextual modifier classes for alert icons.
+
+@each $color, $value in $theme-colors {
+  // override the style of primary and info alerts
+  @if ($color == 'primary') {
+    $value: map-get($theme-colors, 'secondary');
+  }
+  @if index("danger" "warning" "success" "info", $color) {
+    .alert.alert-icon {
+      &.alert-#{$color} {
+        @include alert-icon($value, $value, theme-color-level($color, $alert-color-level), $color);
+      }
+    }
+  }
+}
+
+.alert-icon {
+  padding-left: $alert-icon-padding;
+  > .row {
+    display: inline-flex;
+    @include media-breakpoint-down(xs) {
+      > .col-12 {
+        // margin-left: calc(-2.625rem + .75rem);
+        margin-left: -$alert-icon-padding + $alert-padding-x;
+        min-width: calc(100% + #{$alert-icon-padding - $alert-padding-x});
+      }
+    }
+  }
+
+}
+
+

@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { AngularExemplifyModule } from "../../../angular-exemplify/lib/angular-exemplify.module";
-import { FormBuilder, FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { UntypedFormBuilder, FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [],
@@ -18,7 +18,7 @@ import { FormBuilder, FormsModule, ReactiveFormsModule } from '@angular/forms';
     CommonModule
   ],
   providers:[
-    FormBuilder
+    UntypedFormBuilder
   ]
 })
 export class SharedModule { }

@@ -1,0 +1,133 @@
+$animations: (
+  slideInLeft: slideInLeft $transition-slide-in-duration,
+  slideInRight: slideInRight $transition-slide-in-duration,
+  slideInUp: slideInUp $transition-slide-in-duration,
+  slideInDown: slideInDown $transition-slide-in-duration,
+  fadeIn: fadeIn $transition-fade-duration,
+  fadeInUp: fadeInUp $transition-fade-duration,
+  fadeInDown: fadeInDown $transition-fade-duration,
+  expandY: expandY $transition-fade-duration,
+  expandX: expandX $transition-fade-duration,
+  rotate180: rotate180 $transition-slide-in-duration,
+);
+
+@mixin animations() {
+  @if $enable-transitions {
+    @keyframes fadeIn {
+      0% {
+        opacity: 0;
+      }
+      100% {
+        opacity: 1;
+      }
+    }
+    @keyframes fadeInUp {
+      0% {
+        opacity: 0;
+        transform: translate3d(0,2rem,0);
+      }
+      100% {
+        opacity: 1;
+        transform: translate3d(0,0,0);
+      }
+    }
+    @keyframes fadeInDown {
+      0% {
+        opacity: 0;
+        transform: translate3d(0,-2rem,0);
+      }
+      100% {
+        opacity: 1;
+        transform: translate3d(0,0,0);
+      }
+    }
+    @keyframes slideInRight {
+      0% {
+        transform: translate3d(100%,0,0);
+      }
+      100% {
+        transform: translate3d(0,0,0);
+      }
+    }
+    @keyframes slideInLeft {
+      0% {
+        transform: translate3d(-100%,0,0);
+      }
+      100% {
+        transform: translate3d(0,0,0);
+      }
+    }
+    @keyframes slideInUp {
+      0% {
+        transform: translate3d(0,100%,0);
+      }
+      100% {
+        transform: translate3d(0,0,0);
+      }
+    }
+    @keyframes slideInDown {
+      0% {
+        transform: translate3d(0,-100%,0);
+      }
+      100% {
+        transform: translate3d(0,0,0);
+      }
+    }
+    @keyframes expandY {
+      0% {
+        opacity: 0;
+        transform: scaleY(0);
+      }
+      to {
+        opacity: 1;
+        transform: scaleY(1);
+      }
+    }
+    @keyframes expandX {
+      0% {
+        opacity: 0;
+        transform: scaleX(0);
+      }
+      to {
+        opacity: 1;
+        transform: scaleX(1);
+      }
+    }
+    @keyframes rotate180 {
+      0% {
+        transform: rotate3d(0,0,1, 0);
+      }
+      to {
+        transform: rotate3d(0,0,1, 180deg);
+      }
+    }
+  }
+}
+/**
+ * Add one or more transitions
+ *
+ * @example
+ * @include add-transition('slideInUp');
+ * @include add-transition(('slideInUp','fadeIn'))
+ */
+@mixin add-transition($list) {
+  $combined: '';
+  @if type-of($list) == 'string' {
+    animation: map_get($animations, $list);
+  } @else if type-of($list) == 'list' {
+    @for $i from 1 through length($list) {
+      $anim: map_get($animations, nth($list, $i));
+      @if $anim == null {
+        @warn nth($list, $i) unquote('not found, please use one of the following animations:') to-list($animations, 'keys');
+      }
+
+      @if $i == length($list) {
+        $combined: $combined + $anim;
+      }
+      @else {
+        $combined: $combined + $anim + ',';
+      }
+    }
+    animation: unquote($combined);
+  }
+}
