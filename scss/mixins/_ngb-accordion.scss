@@ -1,7 +1,7 @@
 @mixin ngb-accordion($selector) {
   #{$selector} {
 
-    .card-header {
+    .accordion-header {
       padding: $accordion-header-padding;
       font-weight: $headings-font-weight;
 
@@ -17,14 +17,13 @@
         background-repeat: no-repeat;
         background-size: $accordion-size;
         background-position: center;
-
       }
       button.collapsed::before {
         transform: rotateZ(0deg);
       }
       button {
-        color: $headings-color;
         padding: $accordion-item-padding-y $accordion-item-padding-x;
+        background-color: $white;
         width: 100%;
         text-align: left;
         font-size: $h4-font-size;
@@ -39,10 +38,10 @@
         &:focus-visible {
           box-shadow: 0 0 0.25em 0.0625em $blue inset;
         }
-        &:hover, &:focus {
+        /*&:hover, &:focus {
           text-decoration: none;
           color: $headings-color;
-        }
+        }*/
         &[disabled]::before {
           background:$accordion-icon-disabled;
           background-repeat: no-repeat;
@@ -50,16 +49,28 @@
           background-position: center;
         }
       }
-      &:hover button:not([aria-disabled="true"])::after, &.active button::after {
-      }
+      /*&:hover button:not([aria-disabled="true"])::after, &.active button::after {
+      }*/
     }
     .card-body {
-      background-color: $accordion-body-bg;
-      padding: $accordion-body-padding;
-    }
-    .collapse > {
-      .card-body {
+      .collapsed {
         background-color: $accordion-body-bg-active;
+      }
+    }
+    .accordion-body {
+      background-color: $accordion-body-bg-active !important;
+      padding: $accordion-body-padding;      
+    }
+
+    .accordion-item {
+      overflow: hidden;
+      box-shadow: none;
+      border-top: $accordion-border-color solid $accordion-border-width;
+      border-bottom: $accordion-border-color solid $accordion-border-width;
+      margin-bottom: 0 !important;
+      background-color: $accordion-body-bg;
+      &+ .accordion-item {
+        border-top: none;
       }
     }
   }

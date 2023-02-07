@@ -260,28 +260,6 @@
   }
 }
 
-
-//
-// Accordion
-//
-
-.accordion {
-  overflow-anchor: none;
-
-  > .card {
-    overflow: hidden;
-    box-shadow: none;
-    border-top: $accordion-border-color solid $accordion-border-width;
-    border-bottom: $accordion-border-color solid $accordion-border-width;
-    margin-bottom: 0 !important;
-    background-color: $accordion-body-bg;
-    &+ .card {
-      border-top: none;
-    }
-  }
-}
-
-
 // SEB Specific styles for card
 
 .card {
