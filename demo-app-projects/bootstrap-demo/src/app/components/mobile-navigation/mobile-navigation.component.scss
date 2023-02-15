@@ -1,0 +1,51 @@
+@import 'bootstrap/scss/variables';
+@import 'bootstrap/scss/mixins/mixins';
+.mobile-nav {
+  position: fixed;
+  top: 56px;
+  left: 0;
+  z-index: $zindex-fixed;
+  height: calc(100% - 56px);
+  overflow-y: auto;
+  overflow-x: hidden;
+  .nav-link {
+    color: $dark;
+    padding: $spacer;
+  }
+}
+@include media-breakpoint-up(md) {
+  .mobile-nav {
+    display: none;
+  }
+}
+
+.mobile-header {
+  .col {
+    padding-top: 0.65rem;
+    padding-bottom: 0.35rem;
+    //padding: .375em 0;
+  }
+  .active {
+    background: $green;
+  }
+}
+
+header {
+  height: 56px;
+  position: fixed;
+  z-index: 2;
+  left: 0;
+  //padding-left: 0;
+}
+.mobile-header {
+  background: #333;
+  color: #fff;
+  height: 56px;
+  position: fixed;
+  z-index: 2;
+  left: 0;
+}
+.mobile-breadcrumb {
+  background: $white;
+  height: 56px;
+}

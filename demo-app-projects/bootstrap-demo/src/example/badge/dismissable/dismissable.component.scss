@@ -1,0 +1,4 @@
+@import 'bootstrap/scss/core';
+.badge + .badge {
+  margin-left: map-get($spacers, 3);
+}
