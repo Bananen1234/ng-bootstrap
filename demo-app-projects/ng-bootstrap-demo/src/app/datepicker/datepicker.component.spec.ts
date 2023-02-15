@@ -8,7 +8,6 @@ import {NgbDatepickerModule} from '@ng-bootstrap/ng-bootstrap';
 import {DatepickerRoutingModule} from './datepicker-routing.module';
 import {DatepickerInputComponent} from './datepicker-input/datepicker-input.component';
 import {DatepickerSimpleComponent} from './datepicker-simple/datepicker-simple.component';
-import {FormsModule} from '@angular/forms';
 
 describe('DatepickerComponent', () => {
   let component: DatepickerComponent;

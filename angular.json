@@ -5,7 +5,7 @@
   "projects": {
     "ng-bootstrap": {
       "root": "",
-      "sourceRoot": "src",
+      "sourceRoot": "./demo-app-projects/ng-bootstrap-demo/src",
       "projectType": "application",
       "prefix": "app",
       "schematics": {
@@ -18,16 +18,16 @@
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
             "outputPath": "dist/ng-bootstrap",
-            "index": "src/index.html",
-            "main": "src/main.ts",
-            "polyfills": "src/polyfills.ts",
-            "tsConfig": "src/tsconfig.app.json",
+            "index": "./demo-app-projects/ng-bootstrap-demo/src/index.html",
+            "main": "./demo-app-projects/ng-bootstrap-demo/src/main.ts",
+            "polyfills": "./demo-app-projects/ng-bootstrap-demo/src/polyfills.ts",
+            "tsConfig": "./demo-app-projects/ng-bootstrap-demo/src/tsconfig.app.json",
             "assets": [
-              "src/favicon.ico",
-              "src/assets"
+              "./demo-app-projects/ng-bootstrap-demo/src/favicon.ico",
+              "./demo-app-projects/ng-bootstrap-demo/src/assets"
             ],
             "styles": [
-              "src/styles.scss"
+              "./demo-app-projects/ng-bootstrap-demo/src/styles.scss"
             ],
             "scripts": [
               "node_modules/prismjs/prism.js"

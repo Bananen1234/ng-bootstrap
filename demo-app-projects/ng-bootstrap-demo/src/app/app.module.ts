@@ -5,7 +5,6 @@ import { AppComponent } from './app.component';
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import {AppRoutingModule} from "./app-routing.module";
 import {SharedModule} from "./shared/shared.module";
-import { AngularExemplifyModule } from 'angular-exemplify/lib/angular-exemplify.module';
 
 @NgModule({
   declarations: [

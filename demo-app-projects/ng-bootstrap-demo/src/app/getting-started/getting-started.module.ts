@@ -4,7 +4,6 @@ import { CommonModule } from '@angular/common';
 import { GettingStartedRoutingModule } from './getting-started-routing.module';
 import { GettingStartedComponent } from './getting-started.component';
 import { SharedModule } from "../shared/shared.module";
-import { AngularExemplifyModule } from 'angular-exemplify/lib/angular-exemplify.module';
 
 
 @NgModule({
