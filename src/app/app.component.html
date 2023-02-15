@@ -1,0 +1,31 @@
+<div class="overflow-hidden">
+    <nav class="navbar navbar-dark bg-dark">
+    <span class="navbar-brand" href="#">
+      {{name}}
+    </span>
+        <a class="github-ribbon" href="https://github.com/sebgroup/ng-bootstrap" target="_blank">Fork me on GitHub</a>
+        <span class="navbar-text d-none d-sm-inline-block">
+          A SEB theme for ng-bootstrap
+      </span>
+    </nav>
+    <div class="bg-primary-element py-5 px-3">
+        <h1 class="display-3 text-white">{{name}}</h1>
+        <p class="lead text-white">A SEB theme for ng-bootstrap</p>
+    </div>
+    <div class="container-content mb-5">
+        <ul class="nav flex-column d-none d-lg-block pt-3" #stickyMenu [ngClass]="{'position-fixed': sticky}">
+            <li class="nav-item" *ngFor="let route of routes">
+                <a class="nav-link" routerLink="{{route.path}}" routerLinkActive="active">{{route.name}}</a>
+            </li>
+        </ul>
+        <div class="row mt-4 d-lg-none">
+            <div ngbDropdown (openChange)="toggleBodyLock($event, dropdownMenu)" class="col-12 col-sm-auto" #stickyMobileMenu [ngClass]="{'position-fixed': stickyMobile}">
+                <button class="btn btn-lg btn-outline-primary w-100" id="ngb_dropdown" ngbDropdownToggle> {{$selected | async}}</button>
+                <div ngbDropdownMenu aria-labelledby="dropdownExample" class="w-100 mb-3" #dropdownMenu>
+                    <button *ngFor="let route of routes" class="dropdown-item" routerLink="{{route.path}}" routerLinkActive="active">{{route.name}}</button>
+                </div>
+            </div>
+        </div>
+      <router-outlet></router-outlet>
+    </div>
+</div>

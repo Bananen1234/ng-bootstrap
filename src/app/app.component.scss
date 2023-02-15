@@ -1,0 +1,72 @@
+@import "../../bootstrap/scss/variables"; // imports all sass variables used by bootstrap*
+@import "../../bootstrap/scss/styles/functions"; // import all sass functions used by bootstrap*
+
+.github-ribbon {
+  background: $green;
+  padding: 1rem;
+  transform: rotate(45deg);
+  right: -60px;
+  top: 40px;
+  width: 250px;
+  text-align: center;
+  display: inline-block;
+  position: absolute;
+  color: $white;
+  &:hover {
+    color: $white;
+  }
+}
+.github-ribbon + .navbar-text {
+  margin-right: 180px;
+}
+.container-fluid {
+  max-width: map_get($grid-breakpoints, 'xl');
+}
+
+.nav.flex-column {
+  position: absolute;
+  left: map_get($spacers, 1);
+  &.position-fixed {
+    top: 0;
+  }
+}
+
+a.nav-link.active {
+  position: relative;
+  &::before {
+    content: '';
+    display: block;
+    width: 6px;
+    height: calc(100% - .25rem);
+    background: $green;
+    position: absolute;
+    left: -4px;
+    top: 0.125rem;
+    animation: menu-highlight 200ms ease-in-out;
+  }
+}
+
+.dropdown.position-fixed {
+  z-index: $zindex-dropdown;
+  min-width: 100%;
+  left: 0;
+  top: 0;
+  padding: 0;
+  .btn {
+    border-radius: 0;
+    opacity: 1;
+  }
+}
+.dropdown {
+  min-width: 0;
+  transition: min-width 200ms ease-in-out, padding 200ms ease-in-out;
+}
+
+@keyframes menu-highlight {
+  0% {
+    transform: scaleY(0);
+  }
+  100% {
+    transform: scaleY(1);
+  }
+}

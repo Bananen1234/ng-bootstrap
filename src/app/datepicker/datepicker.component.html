@@ -1,0 +1,49 @@
+<a name="datepicker"><h1 class="my-3 d-none d-lg-block">Datepicker</h1></a>
+<div class="card my-3 mx-n3 mx-md-0">
+  <h4 class="card-header">Installation and usage</h4>
+  <div class="card-body">
+    <p>See <a routerLink="'/getting-started'">getting started</a> for a complete setup.</p>
+    <strong>Steps to get started:</strong>
+    <ol class="list-group list-group-ordered mb-3">
+      <li class="list-group-item">Install using npm (see <a routerLink="'/getting-started'">getting started</a>)</li>
+      <li class="list-group-item">Import <code>NgbDatepickerModule</code> (if you're not including <code>NgbModule</code>)</li>
+      <li class="list-group-item">Import ngb-datepicker.scss and @sebgroup/boostrap custom-forms styles (if you're not including all of bootstrap)</li>
+    </ol>
+    <strong>Import datepicker module:</strong>
+    <exemplify [sources]="[{
+        'name':'app.module.ts',
+        'src':'...\nimport {NgbDatepickerModule} from &quot;@ng-bootstrap/ng-bootstrap&quot;;'+
+        '\n\n@NgModule({\n'+
+        '  declarations: [AppComponent],\n'+
+        '  imports: [\n'+
+        '    ...\n'+
+        '    NgbDatepickerModule // <-- Add this line\n'+
+        '  ]\n'+
+        '})','lang':'js'
+        }]"></exemplify>
+    <strong class="mt-3 d-block">Import ngb-datepicker styles:</strong>
+    <p>This component is meant to be used together with <a href="https://github.com/sebgroup/bootstrap" target="_blank">@sebgroup/bootstrap</a> and in order for the component to get the correct appearance you need to import styles from @sebgroup/bootstrap files to your project.</p>
+    <exemplify [sources]="[{
+        'name':'styles.scss',
+        'src':'@import \'~@sebgroup/bootstrap/scss/core\';\n'+
+'@import \'~@sebgroup/bootstrap/scss/styles/reboot\';\n'+
+'@import \'~@sebgroup/bootstrap/scss/styles/custom-forms\'; /* <-- Add this line */\n'+
+'@import \'~@sebgroup/ng-bootstrap/scss/styles/ngb-datepicker\'; /* <-- Add this line */\n'+
+'@import \'~@sebgroup/fonts/scss/seb-fonts\';','lang':'css'
+        }]"></exemplify>
+  </div>
+</div>
+<div class="card my-3 mx-n3 mx-md-0">
+  <div class="card-body" id="datepickerExample">
+    <h4 class="card-title">Simple datepicker with week number</h4>
+    <p class="mb-3">For more info and examples please refer to ng-bootstrap <a href="https://ng-bootstrap.github.io/#/components/datepicker/overview" target="_blank">official documentation</a>.</p>
+    <app-datepicker-simple></app-datepicker-simple>
+    <!--<exemplify [sources]="sources.simple"></exemplify>-->
+  </div>
+  <div class="card-body" id="datepickerInputExample">
+    <h4 class="card-title">Datepicker with input</h4>
+    <p class="mb-3">For more info and examples please refer to ng-bootstrap <a href="https://ng-bootstrap.github.io/#/components/datepicker/overview" target="_blank">official documentation</a>.</p>
+    <app-datepicker-input></app-datepicker-input>
+    <exemplify [sources]="sources.input"></exemplify>
+  </div>
+</div>

@@ -1,0 +1,43 @@
+/* You can add global styles to this file, and also import other style files */
+
+// minimal scss dependencies for ngb
+@import '../bootstrap/scss/styles/functions';
+@import '../bootstrap/scss/variables';
+@import '../bootstrap/scss/mixins/mixins';
+@import '../bootstrap/scss/styles/reboot';
+@import '@sebgroup/fonts/scss/seb-fonts';
+@import '../bootstrap/scss/styles/forms';
+@import '../bootstrap/scss/styles/custom-forms'; // needed for datepicker
+@import '../bootstrap/scss/styles/dropdown'; // needed for dropdown
+@import '../bootstrap/scss/styles/tooltip'; // needed for tooltips
+@import '../bootstrap/scss/styles/animations'; // needed for animations
+@import '../bootstrap/scss/styles/modal'; // needed for modals
+
+// needed for demo
+
+@import '../bootstrap/scss/styles/scroll';
+@import '../bootstrap/scss/styles/tables';
+@import '../bootstrap/scss/styles/alert';
+@import '../bootstrap/scss/styles/button-group';
+@import '../bootstrap/scss/styles/input-group';
+@import '../bootstrap/scss/styles/navbar';
+@import '../bootstrap/scss/styles/fifth-element';
+@import '../bootstrap/scss/styles/type';
+@import '../bootstrap/scss/styles/utilities';
+@import '../bootstrap/scss/styles/card';
+@import '../bootstrap/scss/styles/buttons';
+@import '../bootstrap/scss/styles/close';
+@import '../bootstrap/scss/styles/grid';
+@import '../bootstrap/scss/styles/nav';
+@import '../bootstrap/scss/styles/code';
+@import '../bootstrap/scss/styles/list-group';
+
+@import '../scss/ng-bootstrap';
+
+
+// needed for markup examples
+@import "../angular-exemplify/lib/scss/prism-exemplify";
+
+.nav-tabs .nav-item .nav-link {
+  background: transparent;
+}

@@ -1,0 +1,83 @@
+<a name="accordion"><h1 class="my-3 d-none d-lg-block">Accordion</h1></a>
+<div class="card my-3 mx-n3 mx-md-0">
+    <h4 class="card-header">Installation and usage</h4>
+    <div class="card-body">
+        <p>See <a routerLink="'/getting-started'">getting started</a> for a complete setup.</p>
+        <strong>Steps to get started:</strong>
+        <ol class="list-group list-group-ordered mb-3">
+            <li class="list-group-item">Install using npm (see <a routerLink="'/getting-started'">getting started</a>)</li>
+            <li class="list-group-item">Import <code>NgbAccordionModule</code> (if you're not including <code>NgbModule</code>)</li>
+            <li class="list-group-item">Import ngb-accordion.scss</li>
+        </ol>
+        <strong>Import accordion module:</strong>
+        <exemplify [sources]="[{
+        'name':'app.module.ts',
+        'src':'...\nimport {NgbAccordionModule} from &quot;@ng-bootstrap/ng-bootstrap&quot;;'+
+        '\n\n@NgModule({\n'+
+        '  declarations: [AppComponent],\n'+
+        '  imports: [\n'+
+        '    ...\n'+
+        '    NgbAccordionModule // <-- Add this line\n'+
+        '  ]\n'+
+        '})','lang':'js'
+        }]"></exemplify>
+        <strong class="mt-3 d-block">Import ngb-accordion styles:</strong>
+        <exemplify [sources]="[{
+        'name':'styles.scss',
+        'src':'@import \'~@sebgroup/bootstrap/scss/core\';\n'+
+'@import \'~@sebgroup/bootstrap/scss/styles/reboot\';\n'+
+'@import \'~@sebgroup/ng-bootstrap/scss/styles/ngb-accordion\'; /* <-- Add this line */\n'+
+'@import \'~@sebgroup/fonts/scss/seb-fonts\';','lang':'css'
+        }]"></exemplify>
+    </div>
+</div>
+<div class="card my-3 mx-n3 mx-md-0">
+    <div class="card-body">
+        <ngb-accordion [closeOthers]="true" activeIds="static-1">
+            <ngb-panel id="static-1" title="Simple">
+                <ng-template ngbPanelContent>
+                    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia
+                    aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor,
+                    sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica,
+                    craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings
+                    occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus
+                    labore sustainable VHS.
+                </ng-template>
+            </ngb-panel>
+            <ngb-panel id="static-2">
+                <ng-template ngbPanelTitle>
+                    <span class="text-info">Custom title<i class="far fa-heart ml-2"></i></span>
+                </ng-template>
+                <ng-template ngbPanelContent>
+                    <p>Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia
+                        aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor,
+                        sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica,
+                        craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings
+                        occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus
+                        labore sustainable VHS.</p>
+                    <div class="form-row justify-content-end">
+                        <div class="col-6 col-sm-auto">
+                            <button class="btn btn-outline-primary w-100">Secondary</button>
+                        </div>
+                        <div class="col-6 col-sm-auto">
+                            <button class="btn btn-primary w-100">Primary</button>
+                        </div>
+                    </div>
+
+                </ng-template>
+            </ngb-panel>
+            <ngb-panel id="static-3" title="Disabled" [disabled]="true">
+                <ng-template ngbPanelContent>
+                    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia
+                    aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor,
+                    sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica,
+                    craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings
+                    occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus
+                    labore sustainable VHS.
+                </ng-template>
+            </ngb-panel>
+        </ngb-accordion>
+        <!--<exemplify [selector]="'ngb-accordion'" [escapeStrings]="[' ngbPanelContent', ' ngbPanelTitle', '[closeOthers]', ' activeIds']"></exemplify>-->
+    </div>
+</div>
+

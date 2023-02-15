@@ -1,0 +1,35 @@
+<label for="ngb_select">Select</label>
+<div ngbDropdown #optionsContainer
+     #multiSelect="ngbDropdown"
+     [container]="useContainerBody ? 'body' : 'null'"
+     [autoClose]="allowMultiple ? 'outside' : true"
+     (openChange)="toggleBodyLock($event, optionsContainer)">
+    <button class="btn btn-secondary w-100" id="ngb_select" ngbDropdownToggle>
+        <ng-container *ngIf="allowMultiple && selectedOptions$ | async as selection">{{selection.length === 0 ? 'Select...' : selection.length > 1 ? selection.length + ' selected': selection[0].name}}</ng-container>
+        <ng-container *ngIf="!allowMultiple">{{ checkboxForm.get('selection').value || 'Select...'}}</ng-container>
+    </button>
+    <div ngbDropdownMenu aria-labelledby="ngb_multiselect" class="w-100 mb-3">
+        <button type="button" class="close d-md-none" aria-label="Close" (click)="multiSelect.close()">
+                <span aria-hidden="true">&times;</span>
+        </button>
+        <ng-container [formGroup]="checkboxForm">
+        <div *ngIf="allowMultiple" class="dropdown-item custom-control custom-checkbox">
+            <input type="checkbox" class="custom-control-input" id="selectAll" formControlName="selectAll">
+            <label class="custom-control-label" for="selectAll">Select all</label>
+        </div>
+        <div class="dropdown-divider my-0"></div>
+        <div [class.dropdown-multi-select-options]="allowMultiple"
+             [class.dropdown-options]="!allowMultiple">
+            <ng-container formArrayName="multiselect" *ngIf="allowMultiple">
+                <div class="dropdown-item custom-control custom-checkbox" *ngFor="let control of multiselect?.controls; let i = index">
+                    <input type="checkbox" class="custom-control-input" [attr.id]="'multiselectOption_' + i" [formControlName]="i">
+                    <label class="custom-control-label" [for]="'multiselectOption_' + i">{{options[i].name}}</label>
+                </div>
+            </ng-container>
+            <ng-container *ngIf="!allowMultiple">
+                <button *ngFor="let option of options" class="dropdown-item" [class.active]="option.selected || option === checkboxForm.get('selection').value" (click)="select(option)">{{option.name || option}}</button>
+            </ng-container>
+        </div>
+        </ng-container>
+    </div>
+</div>
