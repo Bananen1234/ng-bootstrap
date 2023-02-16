@@ -1,6 +1,5 @@
 import { Component, Input } from '@angular/core';
 import { UtilitiesService } from '../../services/utilities.service';
-const temp = (path: string) => require(`../../../example/${path}`);
 
 @Component({
   selector: 'app-example',
@@ -44,7 +43,7 @@ export class ExampleComponent {
   }
 
   @Input() set source(value: string) {
-    this._source = this.loadSource === true ? temp(value) : value;
+    this._source = this.loadSource === true ? value : value;
   }
 
   private _source: string;

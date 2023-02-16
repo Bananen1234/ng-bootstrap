@@ -7,7 +7,7 @@ export const environment = {
   version: (() => {
     let version = '';
     try {
-      version = require('../../dist/lib/package.json').version;
+      version = require('dist/lib/package.json').version;
     } catch (e) {
       version = 'n/a';
     }

@@ -18,10 +18,11 @@ import { IncludeComponent } from './include/include.component';
 import { AnchorHeadingComponent } from './anchor-heading/anchor-heading.component';
 import { faLink } from '@fortawesome/pro-regular-svg-icons/faLink';
 import { RouterModule } from '@angular/router';
+import { AngularExemplifyModule } from 'angular-exemplify/lib/angular-exemplify.module';
 
 @NgModule({
   declarations: [CodeSnippetComponent, ExampleComponent, IncludeComponent, AnchorHeadingComponent],
-  imports: [CommonModule, FontAwesomeModule, RouterModule],
+  imports: [CommonModule, FontAwesomeModule, RouterModule, AngularExemplifyModule],
   exports: [
     CommonModule,
     FontAwesomeModule,
@@ -29,6 +30,7 @@ import { RouterModule } from '@angular/router';
     ExampleComponent,
     IncludeComponent,
     AnchorHeadingComponent,
+    AngularExemplifyModule
   ],
 })
 export class SharedModule {
