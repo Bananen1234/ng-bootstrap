@@ -1,6 +1,6 @@
 {
   "name": "@sebgroup/ng-bootstrap",
-  "version": "15.0.0",
+  "version": "15.0.0-beta",
   "homepage": "https://sebgroup.github.io/ng-bootstrap/",
   "scripts": {
     "ng": "ng",
