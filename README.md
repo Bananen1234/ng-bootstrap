@@ -13,6 +13,7 @@ This is a SEB styled theme for [ng-bootstrap](https://ng-bootstrap.github.io/) w
 | 1.x.x                  | 5.x.x               | 5.x.x                      | 8.x.x   |
 | 2.x.x                  | 5.x.x               | 9.x.x                      | 11.x.x  |
 | 3.x.x                  | 6.x.x               | 10.x.x                     | 12.x.x  |
+| 15.x.x                 | 15.x.x              | 14.x.x                     | 15.x.x  |
 
 ### Install with npm
 
