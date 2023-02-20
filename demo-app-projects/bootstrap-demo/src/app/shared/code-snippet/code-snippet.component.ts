@@ -1,6 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
 import 'prismjs';
-import * as fs from 'fs';
 declare var Prism: any;
 
 @Component({
@@ -21,10 +20,8 @@ export class CodeSnippetComponent implements OnInit {
     this._language = value;
   }
 
-  @Input() set path(value: string) {    
-    console.log(value);
-    this._path = fs.readFileSync(value, 'utf-8');
-    console.log(this._path);
+  @Input() set path(value: string) {        
+    this._path = Prism.highlight(value.trim(), Prism.languages[this.language]);
   }
 
   private _path: string;
