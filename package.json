@@ -7,7 +7,7 @@
     "start": "ng serve --port=4201",
     "build:demo": "ng build --configuration production --base-href https://sebgroup.github.io/ng-bootstrap/ && copyfiles -f src/404.html dist/ng-bootstrap",
     "build-dev": "ng build --configuration production --base-href https://sebgroup.github.io/ng-bootstrap/dev/ --output-path dist/ng-bootstrap/dev && copyfiles -f src/dev/404.html dist/ng-bootstrap/dev",
-    "build": "copyfiles -u 1 scss/**/*.scss dist/lib/ng-bootstrap && copyfiles -f CHANGELOG.md LICENSE.md README.md scss/package.json dist/lib && npm run copy-bootstrap",
+    "build": "copyfiles -u 1 scss/**/*.scss dist/lib/ng-bootstrap/scss && copyfiles -f CHANGELOG.md LICENSE.md README.md scss/package.json dist/lib && npm run copy-bootstrap",
     "copy-bootstrap": "copyfiles -u 1 bootstrap/**/*.scss dist/lib/bootstrap",
     "test": "ng test",
     "test-ci": "ng test --watch=false --progress --browsers=ChromeHeadlessNoSandbox",
