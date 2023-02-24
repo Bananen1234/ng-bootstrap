@@ -9,6 +9,6 @@ describe('workspace-project App', () => {
 
   it('should display welcome message', () => {
     page.navigateTo();
-    expect(page.getParagraphText()).toEqual('@sebgroup/ng-bootstrap');
+    expect(page.getParagraphText()).toEqual('custody-ng-bootstrap/ng-bootstrap');
   });
 });

@@ -17,7 +17,7 @@ export class CardsComponent implements OnInit {
   }];
 
   css = `
-@import '@sebgroup/bootstrap/scss/core';
+@import 'custody-ng-bootstrap/bootstrap/scss/core';
 .card-columns {
   column-count: 1;
   @include media-breakpoint-up(md) {

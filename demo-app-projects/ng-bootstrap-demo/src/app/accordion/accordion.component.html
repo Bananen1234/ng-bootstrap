@@ -10,25 +10,9 @@
             <li class="list-group-item">Import ngb-accordion.scss</li>
         </ol>
         <strong>Import accordion module:</strong>
-        <exemplify [sources]="[{
-        'name':'app.module.ts',
-        'src':'...\nimport {NgbAccordionModule} from &quot;@ng-bootstrap/ng-bootstrap&quot;;'+
-        '\n\n@NgModule({\n'+
-        '  declarations: [AppComponent],\n'+
-        '  imports: [\n'+
-        '    ...\n'+
-        '    NgbAccordionModule // <-- Add this line\n'+
-        '  ]\n'+
-        '})','lang':'js'
-        }]"></exemplify>
+        
         <strong class="mt-3 d-block">Import ngb-accordion styles:</strong>
-        <exemplify [sources]="[{
-        'name':'styles.scss',
-        'src':'@import \'~@sebgroup/bootstrap/scss/core\';\n'+
-'@import \'~@sebgroup/bootstrap/scss/styles/reboot\';\n'+
-'@import \'~@sebgroup/ng-bootstrap/scss/styles/ngb-accordion\'; /* <-- Add this line */\n'+
-'@import \'~@sebgroup/fonts/scss/seb-fonts\';','lang':'css'
-        }]"></exemplify>
+        
     </div>
 </div>
 <div class="card my-3 mx-n3 mx-md-0">
@@ -76,8 +60,7 @@
                     labore sustainable VHS.
                 </ng-template>
             </ngb-panel>
-        </ngb-accordion>
-        <!--<exemplify [selector]="'ngb-accordion'" [escapeStrings]="[' ngbPanelContent', ' ngbPanelTitle', '[closeOthers]', ' activeIds']"></exemplify>-->
+        </ngb-accordion>        
     </div>
 </div>
 

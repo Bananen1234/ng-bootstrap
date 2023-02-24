@@ -1,26 +1,25 @@
-# @sebgroup/ng-bootstrap
-
-[![Build Status](https://travis-ci.com/sebgroup/ng-bootstrap.svg?token=tzrdkWGEu776AVobzRhp&branch=master)](https://travis-ci.com/sebgroup/ng-bootstrap)
-[![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)](http://commitizen.github.io/cz-cli/)
-[![semantic-release](https://img.shields.io/badge/%20%20%F0%9F%93%A6%F0%9F%9A%80-semantic--release-e10079.svg)](https://github.com/semantic-release/semantic-release)
+# custody-ng-bootstrap
 
 ## Getting started
 
 This is a SEB styled theme for [ng-bootstrap](https://ng-bootstrap.github.io/) which includes scss files that are meant to replace the ones provided by ng-bootstrap. See [demo](https://sebgroup.github.io/ng-bootstrap) for more info and examples. Note that this lib also includes `@ng-bootstrap/ng-bootstrap` as a dependency so you don't need to install it yourself unless you want a specific version. Below is a list with minimal versions of libs that are known to work well together.
 
-| @sebgroup/ng-bootstrap | @sebgroup/bootstrap | @ng-bootstrap/ng-bootstrap | angular |
+| custody-ng-bootstrap/ng-bootstrap | custody-ng-bootstrap/bootstrap | @ng-bootstrap/ng-bootstrap | angular |
 | :--------------------- | :------------------ | :------------------------- | :------ |
 | 1.x.x                  | 5.x.x               | 5.x.x                      | 8.x.x   |
 | 2.x.x                  | 5.x.x               | 9.x.x                      | 11.x.x  |
 | 3.x.x                  | 6.x.x               | 10.x.x                     | 12.x.x  |
-| 15.x.x                 | 15.x.x              | 14.x.x                     | 15.x.x  |
+
+| custody-ng-bootstrap   | @ng-bootstrap/ng-bootstrap | angular |
+| :--------------------- | :------------------------- | :------ |
+| 15.x.x                 | 14.x.x                     | 15.x.x  |
 
 ### Install with npm
 
-The following command will install @sebgroup/ng-bootstrap as well as @ng-bootstrap/ng-bootstrap (since it's a dependency for this lib).
+The following command will install custody-ng-bootstrap as well as @ng-bootstrap/ng-bootstrap (since it's a dependency for this lib).
 
 ```
-npm install @sebgroup/ng-bootstrap --save
+npm install custody-ng-bootstrap --save
 ```
 
 ### Import module(s)
@@ -43,19 +42,19 @@ import {NgbModule} from "@ng-bootstrap/ng-bootstrap";
 
 Import `ng-bootstrap` to include styles for all ng-bootstrap components or pick and choose from the list below to include just the parts you want\*.
 
-- ngb-accordion (`@import '@sebgroup/ng-bootstrap/ng-bootstrap/scss/styles/ngb-accordion';`)
-- ngb-datepicker (`@import '@sebgroup/ng-bootstrap/ng-bootstrap/scss/styles/ngb-datepicker';`)
-- ngb-dropdown (`@import '@sebgroup/ng-bootstrap/ng-bootstrap/scss/styles/ngb-dropdown';`)
-- ngb-tooltip (`@import '@sebgroup/ng-bootstrap/ng-bootstrap/scss/styles/ngb-tooltip';`)
+- ngb-accordion (`@import 'custody-ng-bootstrap/ng-bootstrap/scss/styles/ngb-accordion';`)
+- ngb-datepicker (`@import 'custody-ng-bootstrap/ng-bootstrap/scss/styles/ngb-datepicker';`)
+- ngb-dropdown (`@import 'custody-ng-bootstrap/ng-bootstrap/scss/styles/ngb-dropdown';`)
+- ngb-tooltip (`@import 'custody-ng-bootstrap/ng-bootstrap/scss/styles/ngb-tooltip';`)
 
-\* Please note that you need some styles from bootstrap too as this theme relies on [@sebgroup/bootstrap](https://sebgroup.github.io/bootstrap/). See complete example below:
+\* Please note that you need some styles from bootstrap too as this theme relies on [custody-ng-bootstrap/bootstrap](https://sebgroup.github.io/bootstrap/). See complete example below:
 
 ```css
-@import '@sebgroup/ng-bootstrap/bootstrap/scss/styles/core';
-@import '@sebgroup/ng-bootstrap/bootstrap/scss/styles/reboot';
-@import '@sebgroup/ng-bootstrap/bootstrap/scss/styles/modal'; /* needed for modal */
-@import '@sebgroup/ng-bootstrap/bootstrap/scss/styles/animations'; /* needed for modal animations */
-@import '@sebgroup/ng-bootstrap/ng-bootstrap/scss/ng-bootstrap'; /* <-- Add this line */
+@import 'custody-ng-bootstrap/bootstrap/scss/styles/core';
+@import 'custody-ng-bootstrap/bootstrap/scss/styles/reboot';
+@import 'custody-ng-bootstrap/bootstrap/scss/styles/modal'; /* needed for modal */
+@import 'custody-ng-bootstrap/bootstrap/scss/styles/animations'; /* needed for modal animations */
+@import 'custody-ng-bootstrap/ng-bootstrap/scss/ng-bootstrap'; /* <-- Add this line */
 @import '@sebgroup/fonts/scss/seb-fonts';
 ```
 

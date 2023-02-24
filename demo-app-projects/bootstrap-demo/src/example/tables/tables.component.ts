@@ -14,7 +14,7 @@ export class TablesComponent implements OnInit {
   }];
 
   mixin = `/* core includes functions, variables and mixins which don't add css/size to a project */
-@import '@sebgroup/bootstrap/scss/core';
+@import 'custody-ng-bootstrap/bootstrap/scss/core';
 /* class to wrap table sort (i.e. table class name) */'
 .custom-table-class {
 /* include mixin @include table-sort($selector: '.sort', $asc-selector: '.sort-asc', $desc-selector: '.sort-desc', $disabled-selector: '.disabled') */

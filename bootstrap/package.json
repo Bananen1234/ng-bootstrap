@@ -1,5 +1,5 @@
 {
-  "name": "@sebgroup/bootstrap",
+  "name": "custody-ng-bootstrap/bootstrap",
   "version": "15.0.0",
   "description": "A standalone bootstrap theme for SEB",
   "main": "scss/bootstrap.scss",

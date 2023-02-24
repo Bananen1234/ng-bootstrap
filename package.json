@@ -1,5 +1,5 @@
 {
-  "name": "@seb-custody/custody-ng-bootstrap",
+  "name": "custody-ng-bootstrap",
   "version": "15.0.0-beta1",
   "homepage": "https://sebgroup.github.io/ng-bootstrap/",
   "scripts": {
@@ -9,48 +9,20 @@
     "build-dev": "ng build --configuration production --base-href https://sebgroup.github.io/ng-bootstrap/dev/ --output-path dist/ng-bootstrap/dev && copyfiles -f src/dev/404.html dist/ng-bootstrap/dev",
     "build": "copyfiles -u 1 scss/**/*.scss dist/lib/ng-bootstrap/scss && copyfiles -f CHANGELOG.md LICENSE.md README.md scss/package.json dist/lib && npm run copy-bootstrap",
     "copy-bootstrap": "copyfiles -u 1 bootstrap/**/*.scss dist/lib/bootstrap",
+    "package": "npm run build && cd dist/lib && npm pack",
     "test": "ng test",
     "test-ci": "ng test --watch=false --progress --browsers=ChromeHeadlessNoSandbox",
     "lint": "ng lint",
     "e2e": "ng e2e",
     "e2e-ci": "ng e2e --protractor-config=e2e/protractor-ci.conf.js",
     "commit": "git-cz",
-    "semantic-release": "semantic-release && npm run build",
-    "package-lock-sanitizer": "package-lock-sanitizer",
     "format-all": "prettier --config ./.prettierrc --write \"src/{app,environments,assets}/**/*{.ts,.js,.json,.css,.scss}\"",
     "format-staged": "pretty-quick --staged",
     "format-check": "prettier --config ./.prettierrc --list-different \"src/{app,environments,assets}/**/*{.ts,.js,.json,.css,.scss}\"",
     "precommit": "npm run format-staged && npm run lint --fix --force"
-  },
-  "config": {
-    "commitizen": {
-      "path": "./node_modules/cz-conventional-changelog"
-    }
-  },
-  "commitlint": {
-    "extends": [
-      "@commitlint/config-conventional"
-    ]
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "npm run package-lock-sanitizer && git add package-lock.json",
-      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
-    }
-  },
+  },  
   "release": {
-    "pkgRoot": "./dist/lib",
-    "branches": [
-      "+([0-9])?(.{+([0-9]),x}).x",
-      "master",
-      "next",
-      "next-major",
-      {
-        "name": "release\\/([-a-z]*)",
-        "channel": "${name.replace(/^release\\//g, '')}",
-        "prerelease": "${name.replace(/^release\\//g, '')}"
-      }
-    ]
+    "pkgRoot": "./dist/lib"    
   },
   "private": true,
   "dependencies": {
@@ -72,8 +44,8 @@
     "@sebgroup/fonts": "^1.1.0",
     "body-scroll-lock": "^3.1.5",
     "core-js": "^2.6.12",
+    "custody-ngx-toastr": "15.0.0-beta3",
     "mobile-detect": "^1.4.5",
-    "ngx-toastr": "^16.0.2",
     "prismjs": "^1.24.1",
     "rxjs": "^6.6.7",
     "scrollingelement": "^1.5.2",
@@ -86,16 +58,11 @@
     "@angular/compiler-cli": "^15.1.4",
     "@angular/language-service": "^15.1.4",
     "@babel/core": "^7.14.8",
-    "@commitlint/cli": "^17.4.2",
-    "@commitlint/config-conventional": "^8.3.4",
     "@types/jasmine": "^3.8.1",
     "@types/jasminewd2": "^2.0.10",
     "@types/node": "^18.13.0",
     "codelyzer": "^6.0.2",
-    "commitizen": "^4.2.4",
     "copyfiles": "^2.4.1",
-    "cz-conventional-changelog": "^3.3.0",
-    "husky": "^4.3.8",
     "jasmine-core": "~3.8.0",
     "jasmine-spec-reporter": "~5.0.0",
     "karma": "~6.3.4",
@@ -103,22 +70,17 @@
     "karma-coverage-istanbul-reporter": "~3.0.2",
     "karma-jasmine": "~4.0.0",
     "karma-jasmine-html-reporter": "^1.7.0",
-    "package-lock-sanitizer": "^1.0.1",
     "prettier": "^2.3.2",
     "pretty-quick": "^3.1.1",
     "protractor": "~7.0.0",
     "raw-loader": "^4.0.2",
     "replace": "^1.2.1",
-    "semantic-release": "^17.4.4",
     "ts-node": "~7.0.0",
     "tslint": "~6.1.0",
     "typescript": "^4.9.5"
   },
-  "repository": {
-    "type": "git",
-    "url": "https://github.sebank.se/seb-custody/custody-ng-bootstrap.git"
-  },
   "publishConfig": {
-    "access": "restricted"
+    "registry": "https://repo7.sebank.se/artifactory/api/npm/seb-npm/"
   }
+
 }

@@ -1,9 +1,5 @@
 # Bootstrap
 
-[![CI](https://github.com/sebgroup/bootstrap/actions/workflows/main.yml/badge.svg?branch=master)](https://github.com/sebgroup/bootstrap/actions/workflows/main.yml)
-[![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)](http://commitizen.github.io/cz-cli/)
-[![semantic-release](https://img.shields.io/badge/%20%20%F0%9F%93%A6%F0%9F%9A%80-semantic--release-e10079.svg)](https://github.com/semantic-release/semantic-release)
-
 ## THIS PROJECT IS DEPRECATED!
 
 The code works as is but has been deprecated in favor for [Green](https://github.com/sebgroup/green) which is SEB:s new design system.
@@ -11,7 +7,7 @@ The code works as is but has been deprecated in favor for [Green](https://github
 ## Install with npm
 
 ```
-npm install @sebgroup/bootstrap --save
+npm install custody-ng-bootstrap --save
 ```
 
 For more info please see the [wiki](https://github.com/sebgroup/bootstrap/wiki)

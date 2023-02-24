@@ -37,8 +37,8 @@ export class IncludeComponent implements OnInit {
     this._component = value[0];
     this._scssImports = value.reduce(
       (previous, current) =>
-        (previous += `@import \'@sebgroup/bootstrap/scss/styles/${current.fileName}\'; /* styles for ${current.comment} */\n`),
-      `@import \'@sebgroup/bootstrap/scss/core'; /* variables, mixins and functions (no added size) */\n`
+        (previous += `@import \'custody-ng-bootstrap/bootstrap/scss/styles/${current.fileName}\'; /* styles for ${current.comment} */\n`),
+      `@import \'custody-ng-bootstrap/bootstrap/scss/core'; /* variables, mixins and functions (no added size) */\n`
     );
   }
 
@@ -58,7 +58,7 @@ export class IncludeComponent implements OnInit {
       this.updateSnippet();
     }
   }
-  updateSnippet(snip: string = `@import '@sebgroup/bootstrap/scss/bootstrap';`) {
+  updateSnippet(snip: string = `@import 'custody-ng-bootstrap/bootstrap/scss/bootstrap';`) {
     this.snip = snip;
     this.importContent = `<pre class="language-css"><code class="language-css">${Prism.highlight(
       snip.trim(),

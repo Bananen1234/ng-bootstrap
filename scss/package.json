@@ -1,5 +1,5 @@
 {
-  "name": "@seb-custody/custody-ng-bootstrap",
+  "name": "custody-ng-bootstrap",
   "version": "15.0.0-beta1",
   "description": "A SEB theme for ng-bootstrap",
   "main": "scss/ng-bootstrap.scss",
@@ -16,13 +16,13 @@
     "url": "https://github.sebank.se/seb-custody/custody-ng-bootstrap/issues"
   },
   "dependencies": {
-    "@ng-bootstrap/ng-bootstrap": "^14.0.1"
-  },
-  "peerDependencies": {
     "@angular/animations": ">=15.1.4",    
     "@angular/common": ">=15.1.4",
     "@angular/core": ">=15.1.4",
     "@angular/platform-browser": ">=15.1.4",    
     "rxjs": "^6.6.7"
+  },
+  "peerDependencies": {
+    "@ng-bootstrap/ng-bootstrap": "^14.0.1"
   }
 }

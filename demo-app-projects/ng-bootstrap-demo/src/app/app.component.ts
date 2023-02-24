@@ -19,7 +19,7 @@ export class AppComponent implements AfterViewInit {
     elementPosition: any;
     mobileElementPosition: any;
     $selected: Observable<string>;
-    name: string = '@sebgroup/ng-bootstrap';
+    name: string = 'custody-ng-bootstrap/ng-bootstrap';
     routes: any = [
         {name: 'Start', path:'/getting-started'},
         {name: 'Accordion', path:'/accordion'},
