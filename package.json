@@ -1,6 +1,6 @@
 {
-  "name": "@sebgroup/ng-bootstrap",
-  "version": "15.0.0-beta",
+  "name": "@seb-custody/custody-ng-bootstrap",
+  "version": "15.0.0-beta1",
   "homepage": "https://sebgroup.github.io/ng-bootstrap/",
   "scripts": {
     "ng": "ng",
@@ -68,6 +68,7 @@
     "@fortawesome/free-brands-svg-icons": "^6.2.1",
     "@fortawesome/pro-regular-svg-icons": "^6.2.1",
     "@ng-bootstrap/ng-bootstrap": "^14.0.1",
+    "@popperjs/core": "^2.11.6",
     "@sebgroup/fonts": "^1.1.0",
     "body-scroll-lock": "^3.1.5",
     "core-js": "^2.6.12",
@@ -111,11 +112,11 @@
     "semantic-release": "^17.4.4",
     "ts-node": "~7.0.0",
     "tslint": "~6.1.0",
-    "typescript": "^4.8.2"
+    "typescript": "^4.9.5"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/sebgroup/ng-bootstrap.git"
+    "url": "https://github.sebank.se/seb-custody/custody-ng-bootstrap.git"
   },
   "publishConfig": {
     "access": "restricted"

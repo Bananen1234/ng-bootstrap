@@ -1,5 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
+import { RouterModule } from '@angular/router';
 import { FaIconLibrary, FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { faGithub } from '@fortawesome/free-brands-svg-icons/faGithub';
 import { faArrowLeft } from '@fortawesome/pro-regular-svg-icons/faArrowLeft';
@@ -12,25 +13,22 @@ import { faSave } from '@fortawesome/pro-regular-svg-icons/faSave';
 import { faCopy } from '@fortawesome/pro-regular-svg-icons/faCopy';
 import { faEye } from '@fortawesome/pro-regular-svg-icons/faEye';
 import { faEyeSlash } from '@fortawesome/pro-regular-svg-icons/faEyeSlash';
+import { faLink } from '@fortawesome/pro-regular-svg-icons/faLink';
 import { CodeSnippetComponent } from './code-snippet/code-snippet.component';
 import { ExampleComponent } from './example/example.component';
 import { IncludeComponent } from './include/include.component';
 import { AnchorHeadingComponent } from './anchor-heading/anchor-heading.component';
-import { faLink } from '@fortawesome/pro-regular-svg-icons/faLink';
-import { RouterModule } from '@angular/router';
-import { AngularExemplifyModule } from 'angular-exemplify/lib/angular-exemplify.module';
 
 @NgModule({
   declarations: [CodeSnippetComponent, ExampleComponent, IncludeComponent, AnchorHeadingComponent],
-  imports: [CommonModule, FontAwesomeModule, RouterModule, AngularExemplifyModule],
+  imports: [CommonModule, FontAwesomeModule, RouterModule],
   exports: [
     CommonModule,
     FontAwesomeModule,
     CodeSnippetComponent,
     ExampleComponent,
     IncludeComponent,
-    AnchorHeadingComponent,
-    AngularExemplifyModule
+    AnchorHeadingComponent
   ],
 })
 export class SharedModule {

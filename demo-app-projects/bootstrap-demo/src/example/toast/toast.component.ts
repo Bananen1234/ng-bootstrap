@@ -1,6 +1,6 @@
-import {ScssImport} from '../../app/interfaces/scss-import';
 import {Component, OnInit, QueryList, ViewChildren} from '@angular/core';
 import {ToastContainerDirective, ToastrService} from 'ngx-toastr';
+import {ScssImport} from '../../app/interfaces/scss-import';
 
 const toasts: Array<any> = [
   {

@@ -1,14 +1,10 @@
 {
-  "name": "@sebgroup/ng-bootstrap",
-  "version": "15.0.0-beta",
+  "name": "@seb-custody/custody-ng-bootstrap",
+  "version": "15.0.0-beta1",
   "description": "A SEB theme for ng-bootstrap",
   "main": "scss/ng-bootstrap.scss",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/sebgroup/ng-bootstrap.git"
   },
   "publishConfig": {
     "registry": "https://registry.npmjs.org/",
@@ -17,7 +13,7 @@
   "author": "Robert Hjalmers",
   "license": "Apache-2.0",
   "bugs": {
-    "url": "https://github.com/sebgroup/ng-bootstrap/issues"
+    "url": "https://github.sebank.se/seb-custody/custody-ng-bootstrap/issues"
   },
   "dependencies": {
     "@ng-bootstrap/ng-bootstrap": "^14.0.1"
