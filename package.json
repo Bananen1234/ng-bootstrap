@@ -13,7 +13,7 @@
     "compile-css": "webpack --config webpack.sass.js && rm ./dist/lib/bootstrap/css/*.js && rm ./dist/lib/bootstrap/css/*.js.map",
     "copy-scss": "copyfiles -u 1 bootstrap/scss/**/*.scss -e bootstrap/scss/**/*-prebuild*.scss dist/lib/bootstrap/scss",
     "copy-fonts": "copyfiles -u 2 bootstrap/scss/fonts/* dist/lib/bootstrap/fonts",
-    "package": "npm run build && cd dist/lib && npm pack",    
+    "package": "npm run build && cd dist/lib && npm pack",
     "test": "ng test",
     "test-ci": "ng test --watch=false --progress --browsers=ChromeHeadlessNoSandbox",
     "lint": "ng lint",
@@ -24,9 +24,9 @@
     "format-staged": "pretty-quick --staged",
     "format-check": "prettier --config ./.prettierrc --list-different \"src/{app,environments,assets}/**/*{.ts,.js,.json,.css,.scss}\"",
     "precommit": "npm run format-staged && npm run lint --fix --force"
-  },  
+  },
   "release": {
-    "pkgRoot": "./dist/lib"    
+    "pkgRoot": "./dist/lib"
   },
   "private": true,
   "dependencies": {
@@ -48,7 +48,7 @@
     "@sebgroup/fonts": "^1.1.0",
     "body-scroll-lock": "^3.1.5",
     "core-js": "^2.6.12",
-    "custody-ngx-toastr": "15.0.0-beta3",
+    "custody-ngx-toastr": "^15.0.0-beta4",
     "mobile-detect": "^1.4.5",
     "prismjs": "^1.24.1",
     "rxjs": "^6.6.7",
@@ -94,5 +94,4 @@
   "publishConfig": {
     "registry": "https://repo7.sebank.se/artifactory/api/npm/seb-npm/"
   }
-
 }

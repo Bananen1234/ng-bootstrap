@@ -1,6 +1,6 @@
 {
   "name": "custody-ng-bootstrap",
-  "version": "15.0.0-beta2",
+  "version": "15.0.0-beta3",
   "description": "A SEB theme for ng-bootstrap",
   "main": "scss/ng-bootstrap.scss",
   "scripts": {
@@ -13,13 +13,6 @@
   "license": "Apache-2.0",
   "bugs": {
     "url": "https://github.sebank.se/seb-custody/custody-ng-bootstrap/issues"
-  },
-  "dependencies": {
-    "@angular/animations": ">=15.1.4",    
-    "@angular/common": ">=15.1.4",
-    "@angular/core": ">=15.1.4",
-    "@angular/platform-browser": ">=15.1.4",    
-    "rxjs": "^6.6.7"
   },
   "peerDependencies": {
     "@ng-bootstrap/ng-bootstrap": "^14.0.1",
