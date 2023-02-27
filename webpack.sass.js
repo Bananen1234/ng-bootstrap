@@ -10,7 +10,7 @@ const unminifiedBuild = {
     'bootstrap-all': './bootstrap-prebuilt-all.js',
   },
   output: {
-    path: path.resolve(__dirname, 'dist/lib/css'),
+    path: path.resolve(__dirname, 'dist/lib/bootstrap/css'),
   },
   module: {
     rules: [
@@ -32,6 +32,18 @@ const unminifiedBuild = {
         ],
         include: path.resolve(__dirname, 'scss')
       },
+      {
+        test: /\.(woff(2)?|ttf|eot|svg)(\?v=\d+\.\d+\.\d+)?$/,
+        use: [
+          {
+            loader: 'file-loader',
+            options: {
+              name: '[name].[ext]',
+              outputPath: 'fonts/'
+            }
+          }
+        ]
+      }
     ],
   },
   plugins: [
@@ -51,7 +63,7 @@ const minifiedBuild = {
     'bootstrap-all.min': './bootstrap-prebuilt-all.js',
   },
   output: {
-    path: path.resolve(__dirname, 'dist/lib/css'),
+    path: path.resolve(__dirname, 'dist/lib/bootstrap/css'),
   },
   module: {
     rules: [

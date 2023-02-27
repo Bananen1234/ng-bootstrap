@@ -1,0 +1,16 @@
+/*!
+ * seb-style/bootstrap - a theme for Bootstrap 4 (https://github.com/sebgroup/bootstrap)
+ * Copyright 2021 SEB
+ */
+
+ // set font path
+ // $seb-font-path: "../fonts" !default;
+ $seb-font-path: "~@sebgroup/fonts/fonts" !default;
+ 
+ 
+ // load bootstrap
+ @import "load-bootstrap";
+ 
+ 
+ 
+ 

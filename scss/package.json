@@ -1,14 +1,13 @@
 {
   "name": "custody-ng-bootstrap",
-  "version": "15.0.0-beta1",
+  "version": "15.0.0-beta2",
   "description": "A SEB theme for ng-bootstrap",
   "main": "scss/ng-bootstrap.scss",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "publishConfig": {
-    "registry": "https://registry.npmjs.org/",
-    "access": "public"
+    "registry": "https://repo7.sebank.se/artifactory/api/npm/custody-core-npm/"
   },
   "author": "Robert Hjalmers",
   "license": "Apache-2.0",
@@ -23,6 +22,7 @@
     "rxjs": "^6.6.7"
   },
   "peerDependencies": {
-    "@ng-bootstrap/ng-bootstrap": "^14.0.1"
+    "@ng-bootstrap/ng-bootstrap": "^14.0.1",
+    "@sebgroup/fonts": "^1.1.0"
   }
 }
